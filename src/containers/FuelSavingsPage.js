@@ -6,10 +6,10 @@ import FuelSavingsForm from '../components/FuelSavingsForm';
 
 export const FuelSavingsPage = () => {
   return (
-    <FuelSavingsForm
-      saveFuelSavings={this.props.actions.saveFuelSavings}
-      calculateFuelSavings={this.props.actions.calculateFuelSavings}
-      appState={this.props.appState}
+    <FuelSavingsForm 
+    saveFuelSavings={this.props.actions.saveFuelSavings} 
+    calculateFuelSavings={this.props.actions.calculateFuelSavings} 
+    appState={this.props.appState}
     />
   );
 };
@@ -24,6 +24,7 @@ function mapStateToProps(state) {
     appState: state.fuelSavingsAppState
   };
 }
+
 
 function mapDispatchToProps(dispatch) {
   return {
