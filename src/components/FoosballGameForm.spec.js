@@ -2,13 +2,13 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from 'chai';
 import sinon from 'sinon';
-import FuelSavingsForm from './FuelSavingsForm';
-import FuelSavingsTextInput from './FuelSavingsTextInput';
+import FoosballGameForm from './FoosballGameForm';
+import PlayerNameTextInput from './PlayerNameTextInput';
 import FuelSavingsResults from './FuelSavingsResults';
 
-describe('<FuelSavingsForm />', () => {
+describe('<FoosballGameForm />', () => {
 
-  it('should contain <FuelSavingsTextInput /> components', () => {
+  it('should contain <PlayerNameTextInput /> components', () => {
     const saveFuelSavings = () => {};
     const calculateFuelSavings = () => {};
     const appState = {
@@ -28,12 +28,12 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}
     />);
-    const allInputs = wrapper.find(FuelSavingsTextInput);
+    const allInputs = wrapper.find(PlayerNameTextInput);
 
     expect(allInputs).to.be.length(5);
     expect(allInputs.at(0).props().name).to.equal('newMpg');
@@ -68,7 +68,7 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}
@@ -102,7 +102,7 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}
@@ -132,7 +132,7 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}
@@ -162,7 +162,7 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}
@@ -193,7 +193,7 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}
@@ -224,14 +224,14 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}
     />);
 
     expect(calculateFuelSavings.calledOnce).to.be.false;
-    wrapper.find(FuelSavingsTextInput).first().simulate('change');
+    wrapper.find(PlayerNameTextInput).first().simulate('change');
     expect(calculateFuelSavings.calledOnce).to.be.true;
   });
 
@@ -255,7 +255,7 @@ describe('<FuelSavingsForm />', () => {
       }
     };
 
-    const wrapper = shallow(<FuelSavingsForm
+    const wrapper = shallow(<FoosballGameForm
       saveFuelSavings={saveFuelSavings}
       calculateFuelSavings={calculateFuelSavings}
       appState={appState}

@@ -2,11 +2,11 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from '../actions/fuelSavingsActions';
-import FuelSavingsForm from '../components/FuelSavingsForm';
+import FoosballGameForm from '../components/FoosballGameForm';
 
-export const FuelSavingsPage = (props) => {
+export const FoosballGamePage = (props) => {
   return (
-    <FuelSavingsForm
+    <FoosballGameForm
       saveFuelSavings={props.actions.saveFuelSavings}
       calculateFuelSavings={props.actions.calculateFuelSavings}
       appState={props.appState}
@@ -14,7 +14,7 @@ export const FuelSavingsPage = (props) => {
   );
 };
 
-FuelSavingsPage.propTypes = {
+FoosballGamePage.propTypes = {
   actions: PropTypes.object.isRequired,
   appState: PropTypes.object.isRequired
 };
@@ -35,4 +35,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FuelSavingsPage);
+)(FoosballGamePage);
